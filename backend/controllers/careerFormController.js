@@ -55,7 +55,7 @@ const careerForm = asyncHandler(async (req, res) => {
   // send mail with defined transport object
   let mailOptions = {
     // from: '"Nodemailer Testing" <raj.sanghavi1@svkmmumbai.onmicrosoft.com>', // sender address
-    from: "Team XcitEducation",
+    from: "Team FSS",
     to: `${process.env.XCITEDU_HR_EMAIL}`, // list of receivers
     subject: "Job Application received ✔", // Subject line
     // text: "Hello world?", // plain text body

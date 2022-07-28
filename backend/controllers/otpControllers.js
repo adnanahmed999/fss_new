@@ -5,13 +5,13 @@ const nodemailer = require("nodemailer");
 const Vonage = require("@vonage/server-sdk");
 
 const vonage = new Vonage({
-  apiKey: "ef7d6c1a",
-  apiSecret: "MyJKBVyTQZX3NDld",
+  apiKey: process.env.Vonage_api_key,
+  apiSecret: process.env.Vonage_api_secret,
 });
 
 var client = require("twilio")(
-  "AC31a1a14cc1687cd69d005703423ab4f8",
-  "b02eb7d769734c5c70651af50fe05d3e"
+  process.env.twillo_param_1,
+  process.env.twillo_param_2
 );
 /*
 LIST OF CONTROLLERS
@@ -47,7 +47,7 @@ const sendEmail = asyncHandler(async (req, res) => {
     <p>Your OTP is ${otpCode}. OTP is valid for next 5 minutes.</p>
     <p></p>
     <p>Regards</p>
-    <p>Team XcitEducation</p>
+    <p>Team FSS</p>
   `;
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
@@ -67,7 +67,7 @@ const sendEmail = asyncHandler(async (req, res) => {
 
     // send mail with defined transport object
     let mailOptions = {
-      from: "Team XcitEducation",
+      from: "Team FSS",
       to: `${email}`,
       subject: "OTP for email verification ✔",
       html: output,
@@ -154,7 +154,7 @@ const sendMobileOtp = asyncHandler(async (req, res) => {
       .create({
         from: "+12162421648",
         to: "+91" + mobileNumber.toString(),
-        body: `Welcome to XcitEducation. Your OTP for mobile number verification is ${otpCode}. Otp is valid for the next 5 minutes.`,
+        body: `Welcome to FSS. Your OTP for mobile number verification is ${otpCode}. Otp is valid for the next 5 minutes.`,
       })
       .then((message) => console.log(message.sid));
 

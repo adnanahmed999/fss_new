@@ -34,7 +34,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
     if (user) {
       const output = `
-      '<h2>Welcome to XcitEducation </h2>
+      '<h2>Welcome to FSS </h2>
     <p>You have registered successfully</p>
     <h3>Your Account Details:</h3>
     <ul>
@@ -46,7 +46,7 @@ const registerUser = asyncHandler(async (req, res) => {
     <p>Please save your account details for future references</p>
     <p></p>
     <p>Regards</p>
-    <p>Team XcitEducation</p>
+    <p>Team FSS</p>
   `;
       // create reusable transporter object using the default SMTP transport
       let transporter = nodemailer.createTransport({
@@ -67,7 +67,7 @@ const registerUser = asyncHandler(async (req, res) => {
       // send mail with defined transport object
       let mailOptions = {
         // from: '"Nodemailer Testing" <raj.sanghavi1@svkmmumbai.onmicrosoft.com>', // sender address
-        from: "Team XcitEducation",
+        from: "Team FSS",
         to: `${user.email}`, // list of receivers
         subject: "Registration Successful ✔", // Subject line
         // text: "Hello world?", // plain text body

@@ -123,7 +123,7 @@ const updateToCertified = asyncHandler(async (req, res) => {
     </ul>
     <p>Happy Learning</p>
     <p>Regards</p>
-    <p>Team XcitEducation</p>
+    <p>Team FSS</p>
   `;
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
@@ -144,7 +144,7 @@ const updateToCertified = asyncHandler(async (req, res) => {
     // send mail with defined transport object
     let mailOptions = {
       // from: '"Nodemailer Testing" <raj.sanghavi1@svkmmumbai.onmicrosoft.com>', // sender address
-      from: "Team XcitEducation",
+      from: "Team FSS",
       to: `${emailOfUser}`, // list of receivers
       subject: "New instructor feedback on the assignment",
       html: output,
@@ -187,7 +187,7 @@ const updateToUnSubmit = asyncHandler(async (req, res) => {
     </ul>
     <p>Happy Learning</p>
     <p>Regards</p>
-    <p>Team XcitEducation</p>
+    <p>Team FSS</p>
   `;
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
@@ -208,7 +208,7 @@ const updateToUnSubmit = asyncHandler(async (req, res) => {
     // send mail with defined transport object
     let mailOptions = {
       // from: '"Nodemailer Testing" <raj.sanghavi1@svkmmumbai.onmicrosoft.com>', // sender address
-      from: "Team XcitEducation",
+      from: "Team FSS",
       to: `${emailOfUser}`, // list of receivers
       subject: "New instructor feedback on the assignment",
       html: output,

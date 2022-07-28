@@ -7,7 +7,7 @@ const contacUs = asyncHandler(async (req, res) => {
 
   //   if (user) {
   const output = `
-        '<h2>Query received regarding XcitEducation</h2>
+        '<h2>Query received regarding FSS</h2>
       <h4>Details of the user are:</h3>
       <ul>
         <li>Name : ${name}</li>
@@ -35,7 +35,7 @@ const contacUs = asyncHandler(async (req, res) => {
   // send mail with defined transport object
   let mailOptions = {
     // from: '"Nodemailer Testing" <raj.sanghavi1@svkmmumbai.onmicrosoft.com>', // sender address
-    from: "Team XcitEducation",
+    from: "Team FSS",
     to: `${process.env.XCITEDU_HR_EMAIL}`, // list of receivers
     subject: "Query received ✔", // Subject line
     // text: "Hello world?", // plain text body

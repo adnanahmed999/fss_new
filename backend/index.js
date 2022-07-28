@@ -128,58 +128,7 @@ app.post('/codecompiler', async (req, res) => {
   //console.log(req.body);
 
 })
-// const io = new Server(server, {
-//   cors: {
-//     origin: "http://localhost:3000",
-//     methods: ["GET", "POST"],
-//   },
-// });
 
-// io.on("connection", (socket) => {
-//   console.log(`User Connected: ${socket.id}`);
-
-//   socket.on("join_room", (data) => {
-//     socket.join(data);
-//     console.log(`User with ID: ${socket.id} joined room: ${data}`);
-//   });
-
-//   socket.on("send_message", (data) => {
-//     socket.to(data.room).emit("receive_message", data);
-//   });
-
-//   socket.on("disconnect", () => {
-//     console.log("User Disconnected", socket.id);
-//   });
-// });
-// app.post('/codecompiler', async (req, res) => {
-//   const { code, language, input } = req.body;
-//   var data = JSON.stringify({
-//     "code": code,
-//     "language": language,
-//     "input": input
-//   });
-
-
-//   var config = {
-//     method: 'post',
-//     url: 'https://codexweb.netlify.app/.netlify/functions/enforceCode',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     data: data
-//   };
-
-//   axios(config)
-//     .then(function (response) {
-//       console.log(JSON.stringify(response.data));
-//       res.send({ "message": response.data });
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-//   //console.log(req.body);
-
-// })
 app.listen(process.env.PORT || 8080, () => {
   console.log("Server is running on port.");
 });
