@@ -5,18 +5,10 @@ const shortid = require("shortid");
 const { response } = require("express");
 
 const razorpay = new Razorpay({
-  key_id: "rzp_test_tOsI14GHZSP3U8",
-  key_secret: "oytgKKbuxFUlZdx4qr4tzG4j",
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
-// const razorpay = new Razorpay({
-//   key_id: process.env.RAZORPAY_KEY_ID,
-//   key_secret: process.env.RAZORPAY_KEY_SECRET,
-// });
 
-// const razorpay = new Razorpay({
-//   key_id: "rzp_live_qphFT30hy0aZcU",
-//   key_secret: "YW728HfFj3D5R5tun3P2HJYp",
-// });
 
 /*
 LIST OF CONTROLLERS
